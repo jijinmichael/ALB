@@ -7,4 +7,4 @@ ALB is a powerful service that helps improve the availability, scalability, and 
 In this post we are going to see canary deployment vs blue green deployment of the applications.
 
 ### Canary Deployment
-
+---

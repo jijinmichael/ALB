@@ -112,4 +112,13 @@ Go to the ASG >> Select the ASG >> Edit. And assign the TG to ASG as below.
 
 ![image](https://github.com/jijinmichael/ALB/assets/134680540/6d4853d0-c722-4d7d-bc47-78e68707440a)
 
+- Create ALB
+
+Now we are creating the application load balancer. 
+
+![image](https://github.com/jijinmichael/ALB/assets/134680540/1ed55b58-0cf5-47f3-929a-e45bda769a33)
+
+From here click on the ALB section.
+
+
 

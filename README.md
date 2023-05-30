@@ -45,7 +45,7 @@ First of all let us do a canary deployment. In order to proceed with this, pleas
 
 ![image](https://github.com/jijinmichael/ALB/assets/134680540/8da8487b-0dad-4545-89df-97fb228cd562)
 
-Here I'm assigning the name for launch configuration as shopping-app-version-1 with Amazon AMI, it's ID is ami-0607784b46cbe5816 with instance type t2.micro.
+Here I'm assigning the name for launch configuration as **shopping-app-version-1** with Amazon AMI, it's ID is **ami-0607784b46cbe5816** with instance type **t2.micro**.
 
 ![image](https://github.com/jijinmichael/ALB/assets/134680540/444b328a-1806-4157-b562-354e67e30d07)
 
@@ -73,3 +73,21 @@ EOF
 systemctl restart php-fpm.service httpd.service
 systemctl enable php-fpm.service httpd.service
 ```
+Add the required security group, key pair then create the LC.
+
+- Create Auto Scaling Group for the LC
+
+![image](https://github.com/jijinmichael/ALB/assets/134680540/be96006e-6d79-44f6-abc1-12cd12d54abf)
+
+**ASG name** : shopping-app-version-1
+**LC**       : shopping-app-version-1
+
+![image](https://github.com/jijinmichael/ALB/assets/134680540/78a3a2f1-175f-4d33-8e6f-1fadf6bdf702)
+
+Select the VPC and Availability Zones and subnets. Here I'm going with default VPC and AZ ap-south-1a and ap-south-1b.
+
+On the Configure group size and scaling policies, mention Group size as follows.
+- **Desired capacity** = 2
+- **Minimum capacity** = 2
+- **Maximum capacity** = 2
+

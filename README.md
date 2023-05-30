@@ -23,3 +23,17 @@ Canary deployment and blue-green deployment are both deployment strategies used 
 - This strategy provides an incremental and controlled approach to validating new features or changes before full-scale deployment.
 
 ### Blue Green Deployment
+---
+- Blue-green deployment involves running two identical environments, one called "blue" (the current stable version) and the other called "green" (the new version).
+
+- Initially, all traffic is directed to the blue environment while the green environment remains idle.
+
+- The new version is thoroughly tested and validated in the green environment, which is identical to the blue environment.
+
+- Once the green environment is deemed stable, traffic is switched from the blue environment to the green environment in a single switchover.
+
+- Blue-green deployments allow for a fast and seamless transition from the old version to the new version without any downtime or disruption for users.
+
+- If any issues are encountered in the green environment, traffic can be quickly routed back to the blue environment, enabling easy rollbacks.
+
+

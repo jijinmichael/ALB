@@ -106,5 +106,10 @@ Here I'm giving the **Health check path** : /index.php
 
 Leave the rest of the field as it is.
 
-- 
+- Assign ASG to TG(target Group)
+
+Go to the ASG >> Select the ASG >> Edit. And assign the TG to ASG as below.
+
+![image](https://github.com/jijinmichael/ALB/assets/134680540/6d4853d0-c722-4d7d-bc47-78e68707440a)
+
 

@@ -79,21 +79,32 @@ Add the required security group, key pair then create the LC.
 
 ![image](https://github.com/jijinmichael/ALB/assets/134680540/be96006e-6d79-44f6-abc1-12cd12d54abf)
 
-**ASG name** : shopping-app-version-1
-**LC**       : shopping-app-version-1
+- **ASG name** : shopping-app-version-1
+- **LC**       : shopping-app-version-1
 
 ![image](https://github.com/jijinmichael/ALB/assets/134680540/78a3a2f1-175f-4d33-8e6f-1fadf6bdf702)
 
 Select the VPC and Availability Zones and subnets. Here I'm going with default VPC and AZ ap-south-1a and ap-south-1b.
 
 On the Configure group size and scaling policies, mention Group size as follows.
- - **Desired capacity** = 2
- - **Minimum capacity** = 2
- - **Maximum capacity** = 2
+- **Desired capacity** = 2
+- **Minimum capacity** = 2
+- **Maximum capacity** = 2
 
 At the last step mention a tag name as version-1 to identify the instance created by this ASG.
 
 ![image](https://github.com/jijinmichael/ALB/assets/134680540/dc9e640a-5963-4ca1-8ff8-13e000c6bd00)
 
+- Create a target group
 
+![image](https://github.com/jijinmichael/ALB/assets/134680540/cfadc9b1-2ea0-4c3f-8997-b1e658b1bfc0)
+
+- **Choose a target type** : instances
+- **Target group name**    : shopping-app-version-1
+
+Here I'm giving the **Health check path** : /index.php
+
+Leave the rest of the field as it is.
+
+- 
 

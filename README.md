@@ -37,3 +37,39 @@ Canary deployment and blue-green deployment are both deployment strategies used 
 - If any issues are encountered in the green environment, traffic can be quickly routed back to the blue environment, enabling easy rollbacks.
 
 
+In summary, canary deployment involves gradually exposing a new version to a subset of users or servers, while blue-green deployment involves running two identical environments and switching traffic between them. Canary deployment provides a controlled and incremental approach, while blue-green deployment enables seamless switchover with minimal downtime. The choice between the two strategies depends on factors such as the level of risk tolerance, the size of the user base, and the specific requirements of the application.
+
+First of all let us do a canary deployment. In order to proceed with this, please follow the below steps.
+
+- Create a launch configuration
+
+![image](https://github.com/jijinmichael/ALB/assets/134680540/8da8487b-0dad-4545-89df-97fb228cd562)
+
+Here I'm assigning the name for launch configuration as shopping-app-version-1 with Amazon AMI, it's ID is ami-0607784b46cbe5816 with instance type t2.micro.
+
+![image](https://github.com/jijinmichael/ALB/assets/134680540/444b328a-1806-4157-b562-354e67e30d07)
+
+Under the additional details give the user data as follows.
+```
+#!/bin/bash
+
+
+echo "ClientAliveInterval 60" >> /etc/ssh/sshd_config
+echo "LANG=en_US.utf-8" >> /etc/environment
+echo "LC_ALL=en_US.utf-8" >> /etc/environment
+systemctl restart sshd.service
+
+yum install httpd php -y
+
+cat <<EOF > /var/www/html/index.php
+<?php
+\$output = shell_exec('echo $HOSTNAME');
+echo "<h1><center><pre>\$output</pre></center></h1>";
+echo "<h1><center>shopping-app-version-1</center></h1>"
+?>
+EOF
+
+
+systemctl restart php-fpm.service httpd.service
+systemctl enable php-fpm.service httpd.service
+```

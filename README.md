@@ -87,7 +87,13 @@ Add the required security group, key pair then create the LC.
 Select the VPC and Availability Zones and subnets. Here I'm going with default VPC and AZ ap-south-1a and ap-south-1b.
 
 On the Configure group size and scaling policies, mention Group size as follows.
-- **Desired capacity** = 2
-- **Minimum capacity** = 2
-- **Maximum capacity** = 2
+ - **Desired capacity** = 2
+ - **Minimum capacity** = 2
+ - **Maximum capacity** = 2
+
+At the last step mention a tag name as version-1 to identify the instance created by this ASG.
+
+![image](https://github.com/jijinmichael/ALB/assets/134680540/dc9e640a-5963-4ca1-8ff8-13e000c6bd00)
+
+
 

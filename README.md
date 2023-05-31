@@ -39,7 +39,7 @@ Canary deployment and blue-green deployment are both deployment strategies used 
 
 In summary, canary deployment involves gradually exposing a new version to a subset of users or servers, while blue-green deployment involves running two identical environments and switching traffic between them. Canary deployment provides a controlled and incremental approach, while blue-green deployment enables seamless switchover with minimal downtime. The choice between the two strategies depends on factors such as the level of risk tolerance, the size of the user base, and the specific requirements of the application.
 
-First of all let us do a canary deployment. In order to proceed with this, please follow the below steps.
+First of all let us do a **canary deployment**. In order to proceed with this, please follow the below steps.
 
 - Create a launch configuration
 
@@ -120,5 +120,9 @@ Now we are creating the application load balancer.
 
 From here click on the ALB section.
 
-
+Create ALB with following details.
+- **Load balancer name** : shopping-app
+ - On the Network mapping select the VPC and AZ's. 
+ - Assign the required SG.
+ - 
 

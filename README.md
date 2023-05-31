@@ -206,17 +206,23 @@ In the context of load balancing, stickiness refers to the ability of a load bal
 
 ![image](https://github.com/jijinmichael/ALB/assets/134680540/3839d619-2ab4-494d-b327-cc27a6c81953)
 
-In the above we are applying 1 hour stickiness for the TG. So a user will get the same version of the application what he/sge is getting initially rather than switching it into another.
+In the above we are applying 1 hour stickiness for the TG. So a user will get the same version of the application what he/she is getting initially rather than switching it into another.
 
 We will gradually change the ratio of the traffic weight and finally make the whole traffic to version-2. This called as canary deployment.
 
 ![image](https://github.com/jijinmichael/ALB/assets/134680540/bd6c86b8-3eaa-475e-99a6-dd902d16202b)
 
+Now I want to change the version-2 of the application to version-3 with out any down time with 100% traffic to version-3 and 0% traffic to the version-2. In this case we are doing blue green deployment.
 
+Repeat the steps from step-1 to step-5 by changing the names to shopping-app-version-3 instead of version-1.
 
+Then go to load balancer >> select the LB >> listener >> select the HTTPS:443 >> Actions >> Manage Rules.
 
+Edit the rules as follows
 
+![image](https://github.com/jijinmichael/ALB/assets/134680540/8879a0ae-660b-468d-b340-7ffa5b47367b)
 
+The above example is called as blue green deployment.
 
 
 

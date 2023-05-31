@@ -122,7 +122,7 @@ From here click on the ALB section.
 
 Create ALB with following details.
 - **Load balancer name** : shopping-app
- - On the Network mapping select the VPC and AZ's. 
- - Assign the required SG.
- - 
+    - On the Network mapping select the VPC and AZ's. 
+    - Assign the required SG.
+    - 
 

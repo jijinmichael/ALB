@@ -155,5 +155,20 @@ And make the chnages as follows.
 
 ![image](https://github.com/jijinmichael/ALB/assets/134680540/f7d0e008-073e-4944-a257-ac278cbd0d0b)
 
+Again we need to make some changes in the listener. So select the HTTPS:443 protocol in the listener and click on the actions >> Manage Rules.
+
+You will get an interface like below.
+
+![image](https://github.com/jijinmichael/ALB/assets/134680540/fbf921da-621b-440a-8d5a-029809fb41d6)
+
+On this click on the edit button on the right top and delete the default rule and add the entry like below.
+
+![image](https://github.com/jijinmichael/ALB/assets/134680540/1d303aa5-7df3-4160-8fab-6d65b0846b24)
+
+Then add a host header for the domain like as per yours and forward it to the TG which we created previously.
+
+![image](https://github.com/jijinmichael/ALB/assets/134680540/610dfa71-33aa-4780-97ec-2a6df4755323)
+
+
 
 

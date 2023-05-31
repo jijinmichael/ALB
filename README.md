@@ -77,6 +77,8 @@ systemctl enable php-fpm.service httpd.service
 ```
 Add the required security group, key pair then create the LC.
 
+#### Step-2
+---
 - Create Auto Scaling Group for the LC
 
 ![image](https://github.com/jijinmichael/ALB/assets/134680540/be96006e-6d79-44f6-abc1-12cd12d54abf)
@@ -97,6 +99,8 @@ At the last step mention a tag name as version-1 to identify the instance create
 
 ![image](https://github.com/jijinmichael/ALB/assets/134680540/dc9e640a-5963-4ca1-8ff8-13e000c6bd00)
 
+#### Step-3
+---
 - Create a target group
 
 ![image](https://github.com/jijinmichael/ALB/assets/134680540/cfadc9b1-2ea0-4c3f-8997-b1e658b1bfc0)
@@ -108,12 +112,16 @@ Here I'm giving the **Health check path** : /index.php
 
 Leave the rest of the field as it is.
 
+#### Step-4
+---
 - Assign ASG to TG(target Group)
 
 Go to the ASG >> Select the ASG >> Edit. And assign the TG to ASG as below.
 
 ![image](https://github.com/jijinmichael/ALB/assets/134680540/6d4853d0-c722-4d7d-bc47-78e68707440a)
 
+#### Step-5
+---
 - Create ALB
 
 Now we are creating the application load balancer. 
@@ -137,6 +145,8 @@ Create ALB with following details.
 
 ![image](https://github.com/jijinmichael/ALB/assets/134680540/b6d8a7dd-85cd-4424-ab48-2cc44b944b93)
 
+#### Step-6
+---
 Then we need to edit the listener to redirect the HTTP request to HTTPS. For this, select the above created TG >> Listener tab >> Add listener.
 
 ![image](https://github.com/jijinmichael/ALB/assets/134680540/fc821253-b97f-4adf-ae0f-b07bd294a066)

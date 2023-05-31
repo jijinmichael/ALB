@@ -183,7 +183,11 @@ Click on Route 53 >> DNS management >> Click on Hosted Zone >> Select the Hosted
 
 Then you will get the site as below from the 2 instances since we deployed 2 instances in our ASG.
 
-![8c5945c7-67ec-4e05-af5d-1c8c8324586f](https://github.com/jijinmichael/ALB/assets/134680540/9ad9e28a-4c7e-48f6-9418-793520990fea)
+![image](https://github.com/jijinmichael/ALB/assets/134680540/c8f56316-e56f-4538-8030-5bfd0fb6cb3d)
+
+![image](https://github.com/jijinmichael/ALB/assets/134680540/46947a37-a4e6-4cdd-a416-a496398a8e21)
+
+
 
 
 

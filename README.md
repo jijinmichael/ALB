@@ -39,7 +39,7 @@ Canary deployment and blue-green deployment are both deployment strategies used 
 
 In summary, canary deployment involves gradually exposing a new version to a subset of users or servers, while blue-green deployment involves running two identical environments and switching traffic between them. Canary deployment provides a controlled and incremental approach, while blue-green deployment enables seamless switchover with minimal downtime. The choice between the two strategies depends on factors such as the level of risk tolerance, the size of the user base, and the specific requirements of the application.
 
-First of all let us do a **canary deployment**. In order to proceed with this, please follow the below steps.
+To demonstrate this, I need 3 versions of the applications. Here I'm writing a simple small index pages with 3 versions like version-1, version-2 and version-3. To make those please follow the below steps.
 
 #### Step-1
 ---

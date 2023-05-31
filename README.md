@@ -42,7 +42,7 @@ In summary, canary deployment involves gradually exposing a new version to a sub
 First of all let us do a **canary deployment**. In order to proceed with this, please follow the below steps.
 
 #### Step-1
-
+---
 - Create a launch configuration
 
 ![image](https://github.com/jijinmichael/ALB/assets/134680540/8da8487b-0dad-4545-89df-97fb228cd562)

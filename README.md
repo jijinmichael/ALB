@@ -124,5 +124,24 @@ Create ALB with following details.
 - **Load balancer name** : shopping-app
     - On the Network mapping select the VPC and AZ's. 
     - Assign the required SG.
-    - 
+    - Listener : Change it to HTTPS and add the shopping-app-version-1 TG
+    - Load the cert from ACM and create the ALB as follows.
+
+![image](https://github.com/jijinmichael/ALB/assets/134680540/c9bea178-ebf0-4eca-a655-d30ac685bc11)
+
+![image](https://github.com/jijinmichael/ALB/assets/134680540/ffa714c0-7408-464a-8f14-519f8d37b92e)
+
+![image](https://github.com/jijinmichael/ALB/assets/134680540/074f5de7-5998-495c-8a53-e20fd932eecc)
+
+![image](https://github.com/jijinmichael/ALB/assets/134680540/b6d8a7dd-85cd-4424-ab48-2cc44b944b93)
+
+Then we need to edit the listener to redirect the HTTP request to HTTPS. For this, select the above created TG >> Listener tab >> Add listener.
+
+![image](https://github.com/jijinmichael/ALB/assets/134680540/fc821253-b97f-4adf-ae0f-b07bd294a066)
+
+And make the chnages as follows.
+
+![image](https://github.com/jijinmichael/ALB/assets/134680540/f7d0e008-073e-4944-a257-ac278cbd0d0b)
+
+
 

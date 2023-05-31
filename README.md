@@ -169,6 +169,20 @@ Then add a host header for the domain like as per yours and forward it to the TG
 
 ![image](https://github.com/jijinmichael/ALB/assets/134680540/610dfa71-33aa-4780-97ec-2a6df4755323)
 
+#### Step-7
+---
+- Map the record to the ALB in Route53
+
+Click on Route 53 >> DNS management >> Click on Hosted Zone >> Select the Hosted Zone >> Create Record as follows.
+
+![image](https://github.com/jijinmichael/ALB/assets/134680540/428ae0c7-e961-4bfd-b84e-a24559a83b60)
+
+![image](https://github.com/jijinmichael/ALB/assets/134680540/2c496ebd-fe02-4b5c-9b98-b1a7d8e632f7)
+
+![image](https://github.com/jijinmichael/ALB/assets/134680540/c04c2b86-efdd-4a95-8ac4-a45be574586a)
+
+
+
 
 
 

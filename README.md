@@ -222,7 +222,7 @@ Edit the rules as follows
 
 ![image](https://github.com/jijinmichael/ALB/assets/134680540/8879a0ae-660b-468d-b340-7ffa5b47367b)
 
-The above example is called as blue green deployment.
+The above example is called as blue green deployment. The version will swift to the v3 one from v2.
 
 
 

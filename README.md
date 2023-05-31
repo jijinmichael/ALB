@@ -214,6 +214,9 @@ We will gradually change the ratio of the traffic weight and finally make the wh
 
 Now I want to change the version-2 of the application to version-3 with out any down time with 100% traffic to version-3 and 0% traffic to the version-2. In this case we are doing blue green deployment.
 
+<p align="center">
+  <img src="https://github.com/jijinmichael/ALB/assets/134680540/1432a7ca-8a48-4052-8cd7-6ed36dde92f9"></p>
+
 Repeat the steps from step-1 to step-5 by changing the names to shopping-app-version-3 instead of version-1.
 
 Then go to load balancer >> select the LB >> listener >> select the HTTPS:443 >> Actions >> Manage Rules.

@@ -151,7 +151,7 @@ Then we need to edit the listener to redirect the HTTP request to HTTPS. For thi
 
 ![image](https://github.com/jijinmichael/ALB/assets/134680540/fc821253-b97f-4adf-ae0f-b07bd294a066)
 
-And make the chnages as follows.
+And make the changes as follows.
 
 ![image](https://github.com/jijinmichael/ALB/assets/134680540/f7d0e008-073e-4944-a257-ac278cbd0d0b)
 
@@ -191,6 +191,26 @@ Now I want to change the version-1 of the application to version-2 with out any 
 
 <p align="center">
   <img src="https://github.com/jijinmichael/ALB/assets/134680540/aca921a8-0a02-4980-967f-2e44564ad63d"></p>
+
+Repeat the steps from step-1 to step-5 by changing the names to shopping-app-version-2 instead of version-1.
+
+Then go to load balancer >> select the LB >> listener >> select the HTTPS:443 >> Actions >> Manage Rules.
+
+Edit the rules as follows.
+
+![image](https://github.com/jijinmichael/ALB/assets/134680540/ce675cd9-2c28-433f-8eec-dff9c5efe787)
+
+If we are appliying this, the users will get simultaneous versions at the time of refresh or new request. To prevent this, we are applying stickiness for this. 
+
+In the context of load balancing, stickiness refers to the ability of a load balancer to maintain a consistent connection between a client and a particular backend server. When stickiness is enabled, the load balancer ensures that subsequent requests from the same client are forwarded to the same backend server, rather than distributing them across multiple servers.
+
+![image](https://github.com/jijinmichael/ALB/assets/134680540/3839d619-2ab4-494d-b327-cc27a6c81953)
+
+In the above we are applying 1 hour stickiness for the TG. So a user will get the same version of the application what he/sge is getting initially rather than switching it into another.
+
+We will gradually change the ratio of the traffic weight and finally make the whole traffic to version-2. This called as canary deployment.
+
+![image](https://github.com/jijinmichael/ALB/assets/134680540/bd6c86b8-3eaa-475e-99a6-dd902d16202b)
 
 
 

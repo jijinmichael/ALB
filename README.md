@@ -190,7 +190,7 @@ Then you will get the site as below from the 2 instances since we deployed 2 ins
 Now I want to change the version-1 of the application to version-2 with out any down time with 90% traffic to version-1 and 10% traffic to the version-2. In this case we are doing canary deployment. Please note in order to do so the LB must support canary deployment. ALB is such a one which is capable of it.
 
 <p align="center">
-  <img src="https://github.com/jijinmichael/ALB/assets/134680540/aca921a8-0a02-4980-967f-2e44564ad63d"></p>
+  <img src="https://github.com/jijinmichael/ALB/assets/134680540/12f183b5-93ea-43a1-bafa-474d067de42d"></p>
 
 Repeat the steps from step-1 to step-5 by changing the names to shopping-app-version-2 instead of version-1.
 
